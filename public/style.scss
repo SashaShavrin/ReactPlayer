@@ -1,0 +1,241 @@
+@mixin breakpoint($point) {
+	@if $point == lg {
+		@media (max-width: 992px){
+			@content;
+	   }
+   }
+	@else if $point == md {
+		@media (max-width: 768px){
+			@content;
+	   }
+   }
+	@else if $point == sm {
+		@media (max-width: 576px){
+			@content;
+	   }
+   }
+	@else if $point == xs {
+		@media (max-width: 375px){
+			@content;
+	   }
+   }
+	@else if $point == xl {
+		@media (max-width: 1200px){
+			@content;
+	   }
+   }
+	@else if $point == xxl {
+		@media (max-width: 1500px){
+			@content;
+	   }
+   }
+}
+*, ::after, ::before {
+	box-sizing: border-box;
+}
+@font-face {
+	font-family: 'Simphonia-Deco';
+	src: url(./font/Simphonia-Deco.ttf);
+}
+body {
+	background-color: #07000c;
+}
+.container {
+	font-family: Simphonia-Deco;
+	color: white;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	background: linear-gradient(269.85deg, #000000 64.7%, #090010 106.18%);
+	height: 98vh;
+	padding: 25px 50px;
+	@include breakpoint (lg) {
+		flex-direction: column;
+		background:linear-gradient(358deg, #000000 -33.3%, #090010 106.18%);
+   }
+}
+.content {
+	width: 30vw;
+	margin-right: 25px;
+	height: 90vh;
+	position: relative;
+	z-index: 1;
+	@include breakpoint (xxl) {
+		margin-right: 55px;
+   }
+	@include breakpoint (xl) {
+		margin-right: 65px;
+   }
+	@include breakpoint (lg) {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		width: 80vw;
+		height: 18vh;
+		margin-top: 22px;
+		@include breakpoint (md) {
+			margin: 2vh;
+	   }
+   }
+	&__logo {
+		font-size: 150px;
+		line-height: 0px;
+		margin: 52px auto;
+		height: 18vh;
+		color: #ffffff;
+		@include breakpoint (xl) {
+			font-size: 120px;
+	   }
+		@include breakpoint (lg) {
+			font-size: 75px;
+			margin: 0px;
+	   }
+		@include breakpoint (sm) {
+			font-size: 45px;
+	   }
+   }
+	&__text {
+		font-size: 50px;
+		height: 30vh;
+		font-size: 25px;
+		text-align: center;
+		margin-right: -100px;
+		margin-top: 111px;
+		@include breakpoint (lg) {
+			margin: 0;
+			font-size: 25px;
+	   }
+		@include breakpoint (sm) {
+			font-size: 20px;
+	   }
+   }
+	&__footer {
+		font-size: 75px;
+		text-align: start;
+		margin-top: 115px;
+		line-height: 0px;
+		@include breakpoint (lg) {
+			font-size: 35px;
+	   }
+		@include breakpoint (sm) {
+			font-size: 25px;
+	   }
+   }
+	&__cursor {
+		position: absolute;
+		top: 16vh;
+		left: 0;
+		@include breakpoint (xl) {
+			width: 12vw;
+	   }
+		@include breakpoint (lg) {
+			display: none;
+	   }
+		&-two {
+			position: absolute;
+			bottom: 4vh;
+			right: 1vh;
+			@include breakpoint (xl) {
+				width: 16vw;
+				right: -5vw;
+		   }
+			@include breakpoint (lg) {
+				display: none;
+		   }
+	   }
+   }
+}
+.items {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+	gap: 3%;
+	width: 70vw;
+	height: 80vh;
+	@include breakpoint (lg) {
+		width: 90vw;
+   }
+	@include breakpoint (sm) {
+		height: auto;
+		DISPLAY: FLEX;
+		FLEX-DIRECTION: COLUMN;
+   }
+}
+.idm, .punk, .gabber, .hardcore-punk, .grunge, .disco, .lo-fi {
+	font-size: 35px;
+	border-radius: 25px;
+	cursor: pointer;
+	font-family: Simphonia-Deco;
+	border: none;
+	transition: 0.5s;
+	@include breakpoint (lg) {
+		background-size: 120%;
+   }
+	@include breakpoint (sm) {
+		font-size: 25px;
+		height: 8vh;
+		margin-bottom: 15px;
+		background-size: 10%;
+   }
+}
+.gabber{
+	margin-bottom: 0px;
+}
+.idm:hover, .punk:hover, .gabber:hover, .hardcore-punk:hover, .grunge:hover, .disco:hover, .lo-fi:hover {
+	background-position: center;
+	box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.952) 0px 18px 36px -18px inset;
+	padding: 5px;
+	color: #0000008f;
+	font-size: 36px;
+	@include breakpoint (xxl) {
+		background-size: cover;
+		background-position: top;
+   }
+	@include breakpoint (lg) {
+		background-position: center;
+   }
+	@include breakpoint (sm) {
+		font-size: 30px;
+   }
+}
+.punk {
+	grid-row: 1/2;
+	background: url(./img/punk.jpg) no-repeat;
+	background-size: cover;
+}
+.grunge {
+	grid-column: 2/3;
+	grid-row: 1/2;
+	background: url(./img/grunge.jpg) no-repeat;
+	background-size: cover;
+}
+.lo-fi {
+	grid-column: 3/5;
+	grid-row: 1/3;
+	background: url(./img/lo-fi.jpg) no-repeat;
+	background-size: cover;
+}
+.idm {
+	grid-column: 1/3;
+	grid-row: 2/2;
+	background: url(./img/idm.jpg) no-repeat;
+	background-size: cover;
+}
+.disco {
+	grid-column: 1/2;
+	grid-row: 3/4;
+	background: url(./img/disco.jpg) no-repeat ;
+	background-size: cover;
+}
+.hardcore-punk {
+	grid-column: 2/4;
+	grid-row: 3/4;
+	background: url(./img/hardcore\ punk.jpg) no-repeat;
+	background-size: cover;
+}
+.gabber {
+	grid-column: 4/5;
+	grid-row: 3/4;
+	background: url(./img/gabber.jpg) no-repeat;
+	background-size: cover;
+}

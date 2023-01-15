@@ -1,0 +1,269 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Simphonia-Deco";
+  src: url(./font/Simphonia-Deco.ttf);
+}
+body {
+  background-color: #07000c;
+}
+
+.container {
+  font-family: Simphonia-Deco;
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+  background: linear-gradient(269.85deg, #000000 64.7%, #090010 106.18%);
+  height: 98vh;
+  padding: 25px 50px;
+}
+@media (max-width: 992px) {
+  .container {
+    flex-direction: column;
+    background: linear-gradient(358deg, #000000 -33.3%, #090010 106.18%);
+  }
+}
+
+.content {
+  width: 30vw;
+  margin-right: 25px;
+  height: 90vh;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 1500px) {
+  .content {
+    margin-right: 55px;
+  }
+}
+@media (max-width: 1200px) {
+  .content {
+    margin-right: 65px;
+  }
+}
+@media (max-width: 992px) {
+  .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    width: 80vw;
+    height: 18vh;
+    margin-top: 22px;
+  }
+}
+@media (max-width: 992px) and (max-width: 768px) {
+  .content {
+    margin: 2vh;
+  }
+}
+.content__logo {
+  font-size: 150px;
+  line-height: 0px;
+  margin: 52px auto;
+  height: 18vh;
+  color: #ffffff;
+}
+@media (max-width: 1200px) {
+  .content__logo {
+    font-size: 120px;
+  }
+}
+@media (max-width: 992px) {
+  .content__logo {
+    font-size: 75px;
+    margin: 0px;
+  }
+}
+@media (max-width: 576px) {
+  .content__logo {
+    font-size: 45px;
+  }
+}
+.content__text {
+  font-size: 50px;
+  height: 30vh;
+  font-size: 25px;
+  text-align: center;
+  margin-right: -100px;
+  margin-top: 111px;
+}
+@media (max-width: 992px) {
+  .content__text {
+    margin: 0;
+    font-size: 25px;
+  }
+}
+@media (max-width: 576px) {
+  .content__text {
+    font-size: 20px;
+  }
+}
+.content__footer {
+  font-size: 75px;
+  text-align: start;
+  margin-top: 115px;
+  line-height: 0px;
+}
+@media (max-width: 992px) {
+  .content__footer {
+    font-size: 35px;
+  }
+}
+@media (max-width: 576px) {
+  .content__footer {
+    font-size: 25px;
+  }
+}
+.content__cursor {
+  position: absolute;
+  top: 16vh;
+  left: 0;
+}
+@media (max-width: 1200px) {
+  .content__cursor {
+    width: 12vw;
+  }
+}
+@media (max-width: 992px) {
+  .content__cursor {
+    display: none;
+  }
+}
+.content__cursor-two {
+  position: absolute;
+  bottom: 4vh;
+  right: 1vh;
+}
+@media (max-width: 1200px) {
+  .content__cursor-two {
+    width: 16vw;
+    right: -5vw;
+  }
+}
+@media (max-width: 992px) {
+  .content__cursor-two {
+    display: none;
+  }
+}
+
+.items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 3%;
+  width: 70vw;
+  height: 80vh;
+}
+@media (max-width: 992px) {
+  .items {
+    width: 90vw;
+  }
+}
+@media (max-width: 576px) {
+  .items {
+    height: auto;
+    DISPLAY: FLEX;
+    FLEX-DIRECTION: COLUMN;
+  }
+}
+
+.idm, .punk, .gabber, .hardcore-punk, .grunge, .disco, .lo-fi {
+  font-size: 35px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-family: Simphonia-Deco;
+  border: none;
+  transition: 0.5s;
+}
+@media (max-width: 992px) {
+  .idm, .punk, .gabber, .hardcore-punk, .grunge, .disco, .lo-fi {
+    background-size: 120%;
+  }
+}
+@media (max-width: 576px) {
+  .idm, .punk, .gabber, .hardcore-punk, .grunge, .disco, .lo-fi {
+    font-size: 25px;
+    height: 8vh;
+    margin-bottom: 15px;
+    background-size: 10%;
+  }
+}
+
+.gabber {
+  margin-bottom: 0px;
+}
+
+.idm:hover, .punk:hover, .gabber:hover, .hardcore-punk:hover, .grunge:hover, .disco:hover, .lo-fi:hover {
+  background-position: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.952) 0px 18px 36px -18px inset;
+  padding: 5px;
+  color: rgba(0, 0, 0, 0.5607843137);
+  font-size: 36px;
+}
+@media (max-width: 1500px) {
+  .idm:hover, .punk:hover, .gabber:hover, .hardcore-punk:hover, .grunge:hover, .disco:hover, .lo-fi:hover {
+    background-size: cover;
+    background-position: top;
+  }
+}
+@media (max-width: 992px) {
+  .idm:hover, .punk:hover, .gabber:hover, .hardcore-punk:hover, .grunge:hover, .disco:hover, .lo-fi:hover {
+    background-position: center;
+  }
+}
+@media (max-width: 576px) {
+  .idm:hover, .punk:hover, .gabber:hover, .hardcore-punk:hover, .grunge:hover, .disco:hover, .lo-fi:hover {
+    font-size: 30px;
+  }
+}
+
+.punk {
+  grid-row: 1/2;
+  background: url(./img/punk.jpg) no-repeat;
+  background-size: cover;
+}
+
+.grunge {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  background: url(./img/grunge.jpg) no-repeat;
+  background-size: cover;
+}
+
+.lo-fi {
+  grid-column: 3/5;
+  grid-row: 1/3;
+  background: url(./img/lo-fi.jpg) no-repeat;
+  background-size: cover;
+}
+
+.idm {
+  grid-column: 1/3;
+  grid-row: 2/2;
+  background: url(./img/idm.jpg) no-repeat;
+  background-size: cover;
+}
+
+.disco {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background: url(./img/disco.jpg) no-repeat;
+  background-size: cover;
+}
+
+.hardcore-punk {
+  grid-column: 2/4;
+  grid-row: 3/4;
+  background: url(./img/hardcore\ punk.jpg) no-repeat;
+  background-size: cover;
+}
+
+.gabber {
+  grid-column: 4/5;
+  grid-row: 3/4;
+  background: url(./img/gabber.jpg) no-repeat;
+  background-size: cover;
+}/*# sourceMappingURL=style.css.map */

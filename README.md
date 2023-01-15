@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 <img src="https://user-images.githubusercontent.com/97390534/209474723-c37d54b8-e0fb-4a00-9546-4e2102cc6476.png" width=100% height=50%>
 <div>
 <img src="https://user-images.githubusercontent.com/97390534/212543723-f90dd4b0-42df-411f-b2e7-a479fadbddb2.png" width=70.5% height=50%>
-&emsp;<img src="https://user-images.githubusercontent.com/97390534/212543625-f9f4ebef-c93b-4abf-967d-602cf53f9fde.png" width=20% height=30%>
+&emsp;<img src="https://user-images.githubusercontent.com/97390534/212543625-f9f4ebef-c93b-4abf-967d-602cf53f9fde.png" width=10% height=30%>
 </div>
 
 # Stack
